@@ -6,16 +6,13 @@ const Sidebar = () => {
       <nav className="side-bar__nav">
         <ul>
           <li>
-            <a href="#s">Profile</a>
+            <a href="/profile">Profile</a>
           </li>
           <li>
-            <a href="#s">Messages</a>
+            <a href="/dialogs">Messages</a>
           </li>
           <li>
-            <a href="#s">News</a>
-          </li>
-          <li>
-            <a href="#s">Musics</a>
+            <a href="/news">News</a>
           </li>
         </ul>
         <div className={SidebarStyle.underlinks}>
