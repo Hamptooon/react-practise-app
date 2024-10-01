@@ -1,0 +1,26 @@
+.dialogsItem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.062);
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 22px;
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.062);
+    }
+    &.active {
+        color: rgb(219, 152, 255);
+        background-color: rgba(255, 255, 255, 0.062);
+    }
+    .dialogsItemImg {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-right: 10px;
+    }
+    .dialogsItemName {
+        font-size: 1.2rem;
+    }
+}
+

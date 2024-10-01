@@ -1,22 +1,40 @@
 import React from "react";
-import SidebarStyle from "./Sidebar.module.scss";  
+import SidebarStyle from "./Sidebar.module.scss";
+import { NavLink } from "react-router-dom";
+
 const Sidebar = () => {
   return (
     <aside className={SidebarStyle.sidebar}>
       <nav className="side-bar__nav">
         <ul>
           <li>
-            <a href="/profile">Profile</a>
+            <NavLink 
+              to="/profile" 
+              className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
+              Profile
+            </NavLink>
           </li>
           <li>
-            <a href="/dialogs">Messages</a>
+            <NavLink 
+              to="/dialogs" 
+              className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
+              Messages
+            </NavLink>
           </li>
           <li>
-            <a href="/news">News</a>
+            <NavLink 
+              to="/news" 
+              className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
+              News
+            </NavLink>
           </li>
         </ul>
         <div className={SidebarStyle.underlinks}>
-          <a href="#s">Settings</a>
+          <NavLink 
+            to="/settings" 
+            className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
+            Settings
+          </NavLink>
         </div>
       </nav>
     </aside>

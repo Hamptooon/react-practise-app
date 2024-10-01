@@ -14,8 +14,14 @@
     margin-bottom: 20px;
 }
 .sidebar li a{
-    color: whitesmoke;
+    color: rgb(211, 211, 211);
+    &.active{
+        color: rgb(219, 152, 255);
+    }
+    
+    
 }
+
 .underlinks{
     font-size: 1rem;
     
@@ -23,4 +29,9 @@
 
 .underlinks a{
     color: rgb(136, 136, 136);
+    &.active{
+        color: rgb(219, 152, 255);
+    }
 }
+
+
