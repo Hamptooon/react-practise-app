@@ -2,22 +2,21 @@ import React from 'react';
 import DialogsStyle from './Dialogs.module.scss';
 import DialogsItem from './DialogsItem/DialogsItem';
 import Message from './Message/Message';
+
+
+
+
 const Dialogs = (props) => {
 
-    let dialogsData =[
-        {id: 1, name: 'Igor'},
-        {id: 2, name: 'Radmil'},
-        {id: 3, name: 'Egor'},
-    ]
-    let messagesData = [
-        {id: 1, message: 'Hi dude!'},
-        {id: 2, message: 'How are You?)'},
-        {id: 3, message: 'I\'m fine thnks'},
-        {id: 4, message: 'It\'s good, will be able to meet tommorow?'},
-    ]
-    let dialogsElements = dialogsData.map(d => <DialogsItem name={d.name} />)
-    let messagesElements = messagesData.map(m => <Message message={m.message} />)
-    
+    let messageInput = React.createRef();
+    let addMessage = () => {
+        let text = messageInput.current.value;
+        props.addMessage(text);
+        messageInput.current.value = '';
+    }
+    let dialogsElements = props.dialogsData.map(d => <DialogsItem name={d.name} />)
+    let messagesElements = props.messagesData.map(m => <Message message={m.message} />)
+    console.log(props)
     return (
         <div className={DialogsStyle.dialogsContainer}>
             
@@ -29,7 +28,12 @@ const Dialogs = (props) => {
                 </div>
                 <div className={DialogsStyle.messages}>
                     {messagesElements}
+                    <div className={DialogsStyle.messageInput}>
+                        <textarea ref = {messageInput} ></textarea> 
+                        <button onClick={addMessage}>Send</button>
+                    </div>
                 </div>
+                
             </div>
         </div>
     )

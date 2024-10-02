@@ -17,4 +17,35 @@
 
 .messages{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.messageInput{
+    display: flex;
+    margin-top: 70px;
+    textarea{
+        background-color: rgb(37, 37, 37);
+        border: 2px solid rgb(65, 65, 65);
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px 0 0 10px;
+        color: whitesmoke;
+        padding: 10px;
+        resize: none;
+        &:focus{
+            outline: none;
+        }
+    }
+    button{
+        background-color: rgb(59, 59, 59);
+        border: none;
+        padding: 10px;
+        border-radius: 0 10px 10px 0;
+        color: whitesmoke;
+        cursor: pointer;
+        
+    }
 }

@@ -16,6 +16,13 @@ const Sidebar = () => {
           </li>
           <li>
             <NavLink 
+              to="/news" 
+              className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
+              News
+            </NavLink>
+          </li>
+          <li>
+            <NavLink 
               to="/dialogs" 
               className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
               Messages
@@ -23,11 +30,12 @@ const Sidebar = () => {
           </li>
           <li>
             <NavLink 
-              to="/news" 
+              to="/friends" 
               className={({ isActive }) => isActive ? SidebarStyle.active : ''}>
-              News
+              Friends
             </NavLink>
           </li>
+          
         </ul>
         <div className={SidebarStyle.underlinks}>
           <NavLink 
